@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Nozes Audiovisual</title>
+        <link rel="icon" href="icone-nozes.png" type="image/png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+        <header>
+            <div class="logo">Nozes Audiovisual</div>
+            <nav>
+                <a href="#inicio">Inicio</a>
+                <a href="#quem-somos">Quem Somos</a>
+                <a href="#portfolio">Portfólio</a>
+            </nav>
+        </header>
+
+        <div class="secao-destaque">
+            <div class="textos">
+                <p>Produtora focada em transformar ideias em vídeos incríveis.</p>
+                <a href="https://wa.me/5571999596659?text=Olá! Vim pelo site da Nozes e gostaria de solicitar um orçamento!" class="botao" target="_blank">Solicitar Orçamento</a>
+            </div>
+
+            <iframe
+                class="video-destaque"
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/Oe1gab_EnWk"
+                title="Video Promocional Nozes Audiovisual"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+        <div class="quem-somos" id="quem-somos">
+            <div class="carrossel-container">
+                <div class="carrossel-imagens" id="fita-imagens">
+                    <img src="equipe1.jpeg" alt="Bastidores 1">
+                    <img src="equipe2.jpeg" alt="Bastidores 2">
+                    <img src="equipe3.jpeg" alt="Bastidores 3">
+                    <img src="equipe4.jpeg" alt="Bastidores 4">
+                </div>
+
+                <button class="btn-carrossel prev" onclick="mudarImagem(-1)">&#10094;</button>
+                <button class="btn-carrossel next" onclick="mudarImagem(1)">&#10095;</button>
+            </div>
+
+            <div class="textos-equipe">
+                <h2>Quem Somos</h2>
+                <p>A Nozes nasceu da paixão de três amigos por contar histórias através das lentes. Nós acreditamos que cada detalhe importa na hora de transformar a sua ideia em um vídeo inesquecível, seja em casamentos, eventos ou produções comerciais.</p>
+            </div>
+        </div>
+
+        <script>
+            let indiceAtual = 0;
+            const totalImagens = 4;
+            const fita = document.getElementById('fita-imagens');
+
+            function mudarImagem(direcao){
+                indiceAtual +=direcao;
+
+                if(indiceAtual >= totalImagens){
+                    indiceAtual = 0;
+                }
+
+                if(indiceAtual < 0){
+                    indiceAtual = totalImagens - 1;
+                }
+
+                fita.style.transform = `translateX(${-indiceAtual * 100}%)`
+            }
+
+            setInterval(() => {
+                mudarImagem(1);
+            }, 3000);
+        </script>
+
+        <div class="portfolio" id="portfolio">
+            <h2 class="titulo-sessao">Nosso Portfólio</h2>
+
+            <div class="grade-videos">
+
+                <div class="item-video">
+                    <iframe src="https://www.youtube.com/embed/uM5K5yNpe9k?rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+                <div class="item-video">
+                    <iframe src="https://www.youtube.com/embed/veRHmYMPojs?rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+    
+                <div class="item-video">
+                    <iframe src="https://www.youtube.com/embed/oWdee03aG3k?rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+    
+                <div class="item-video">
+                    <iframe src="https://www.youtube.com/embed/mo-fBUbjFPQ?rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                
+            </div>
+        </div>
+
+        <footer>
+            <div class="rodape-conteudo">
+                <h2>Nozes Audiovisual Criativo</h2>
+                <p>Transformando ideias em vídeos incríveis</p>
+                <p>📍 Salvador, Bahia</p>
+
+                <div class="redes-sociais">
+                    <a href="https://www.instagram.com/nozesaudiovisual/?utm_source=ig_web_button_share_sheet" target="_blank">Instagram</a> | 
+                    <a href="https://wa.me/5571999596659" target="_blank">WhatsApp</a> | 
+                    <a href="mailto:contato@comnozes.com">E-mail</a>
+                </div>
+
+                <div class="direitos">
+                    <p>&copy; 2026 Nozes Audiovisual. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
+
+        <a href="https://wa.me/5571999596659?text=Olá! Estava vendo o portfólio no site e gostaria de um orçamento." class="whatsapp-flutuante" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="40">
+        </a>
+
+    </body>
+</html>
