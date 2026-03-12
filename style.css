@@ -1,11 +1,11 @@
-body{
+body {
     background-color: #fdf6e3;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
 }
 
-header{
+header {
     background-color: #fdf6e3;
     padding: 20px 50px;
     display: flex;
@@ -18,19 +18,19 @@ header{
     transition: all 0.3s ease;
 }
 
-.header-scrolled{
+.header-scrolled {
     padding: 10px 20px;
     background-color: rgba(0, 0, 0, 0.1);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.logo{
+.logo {
     font-size: 24px;
     font-weight: bold;
     color: #8b4513;
 }
 
-nav a{
+nav a {
     margin-left: 30px;
     text-decoration: none;
     color: #333;
@@ -38,21 +38,21 @@ nav a{
     transition: 0.3s;
 }
 
-nav a:hover{
+nav a:hover {
     color: #8b4513;
 }
 
-h1{
+h1 {
     color: #8b4513;
 }
 
-p{
+p {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
 }
 
-.botao{
+.botao {
     display: inline-block;
     background-color: #8b4513;
     color: white;
@@ -64,20 +64,12 @@ p{
     transition: 0.3s;
 }
 
-.botao:hover{
+.botao:hover {
     background-color: #5c2e0c;
     transform: scale(1.05);
 }
 
-.video-destaque{
-    max-width: 100%;
-    width: 500px;
-    height: 280px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.secao-destaque{
+.secao-destaque {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -86,33 +78,19 @@ p{
     margin: 40px auto;
 }
 
-.textos{
+.textos {
     text-align: left;
 }
 
-header{
-    background-color: #fdf6e3;
-    padding: 20px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+.video-destaque {
+    max-width: 100%;
+    width: 500px;
+    height: 280px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.logo{
-    font-size: 24px;
-    font-weight: bold;
-    color: #8b4513;
-}
-
-nav a:hover{
-    color: #8b4513;
-}
-
-.quem-somos{
+.quem-somos {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -122,13 +100,13 @@ nav a:hover{
     padding: 20px;
 }
 
-.textos-equipe{
+.textos-equipe {
     text-align: left;
     flex: 1;
     min-width: 350px;
 }
 
-.textos-equipe h2{
+.textos-equipe h2 {
     color: #8b4513;
     font-size: 32px;
     margin-bottom: 15px;
@@ -142,7 +120,7 @@ nav a:hover{
     color: #333;
 }
 
-.carrossel-container{
+.carrossel-container {
     width: 600px;
     aspect-ratio: 16/9;
     position: relative;
@@ -169,7 +147,6 @@ nav a:hover{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    
     background-color: #8b4513; 
     color: white;
     padding: 15px 18px;
@@ -188,26 +165,57 @@ nav a:hover{
 .prev { left: 10px; }
 .next { right: 10px; }
 
-.portfolio{
+.portfolio {
     max-width: 1100px;
     margin: 100px auto;
     padding: 20px;
     text-align: center;
 }
 
-.titulo-sessao{
+.titulo-sessao {
     color: #8b4513;
     font-size: 36px;
-    margin-bottom: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 0;
 }
 
-.grade-videos{
+.botoes-filtro {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 60px !important;
+    margin-bottom: 60px !important;
+}
+
+.btn-filtro {
+    background-color: transparent;
+    border: 2px solid #8b4513;
+    color: #8b4513;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-filtro:hover, .btn-filtro.ativo {
+    background-color: #8b4513;
+    color: white;
+}
+
+.esconder {
+    display: none;
+}
+
+.grade-videos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
 }
 
-.item-video{
+.item-video {
     width: 100%;
     aspect-ratio: 16 / 9;
     border-radius: 10px;
@@ -215,7 +223,7 @@ nav a:hover{
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.item-video iframe{
+.item-video iframe {
     width: 100%;
     height: 100%;
 }
@@ -284,32 +292,21 @@ footer {
     transform: scale(1.1); 
 }
 
-@media (max-width: 768px){
-    .secao-destaque{
+@media (max-width: 768px) {
+    .secao-destaque {
         flex-direction: column;
         text-align: center;
         padding: 20px;
         margin: 40px auto;
     }
 
-    .textos{
+    .textos {
         text-align: center;
     }
 
-    .video-destaque{
+    .video-destaque {
         width: 100%;
         height: 200px;
-    }
-
-    header{
-        flex-direction:column;
-        padding:15px;
-        gap:15px
-    }
-
-    nav a{
-        margin-left: 10px;
-        margin-right: 10px;
     }
 
     header {
@@ -317,7 +314,7 @@ footer {
         padding: 15px;
         gap: 15px;
     }
-    
+
     nav a {
         margin-left: 10px;
         margin-right: 10px;
